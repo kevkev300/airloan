@@ -7,4 +7,7 @@ class OffersController < ApplicationController
 
   def create
   end
+
+  def show
+  end
 end
