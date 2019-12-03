@@ -1,2 +1,80 @@
-<h1>Offers#index</h1>
-<p>Find me in app/views/offers/index.html.erb</p>
+<!-- <div class="banner" id="map" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://api.mapbox.com/[...]?access_token=pk.eyJ1IjoiYW5ndXN0YXRjaGVsbCIsImEiOiJjanRlaWQwbzMwMTlsM3lydWMwNW41dG40In0.P4X8Ae7V6RXAGw65l6T-PA);">
+</div> -->
+
+
+
+<div class="banner" id="map" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(https://www.justinesmith.net/wordpress/wp-content/uploads/2017/05/World-Map-2013-2254x1360.jpg);">
+</div>
+
+<div class="container">
+
+<h1 style="margin-top: 20px;">Available Loans</h1>
+
+<div class="cards">
+
+<% if @offers.count.positive? %>
+
+  <% @offers.each do |offer| %>
+    <% link_to offer_path(offer.id) %>
+      <div class="card-trip">
+        <%= cl_image_tag offer.photo, height: 150, width: 200, crop: :fill %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= "€ #{offer.amount}" %></h2>
+            <p><%= "#{offer.user.first_name} #{offer.user.last_name}" %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= "#{offer.interest} %" %></h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+  <% end %>
+
+<% else %>
+
+  <div class="card-trip">
+    <img src="https://i.pinimg.com/originals/91/8e/7a/918e7a39b2d71bd85d3e26cf6b42a1ec.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>€ N000</h2>
+        <p>Bob Smith: Description</p>
+      </div>
+      <h2 class="card-trip-pricing">5%</h2>
+    </div>
+  </div>
+
+  <div class="card-trip">
+    <img src="https://i.blogs.es/7d43be/snip_20191017171919/1366_2000.jpeg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>€ N000</h2>
+        <p>Bob Smith: Description</p>
+      </div>
+      <h2 class="card-trip-pricing">6%</h2>
+    </div>
+  </div>
+
+  <div class="card-trip">
+    <img src="https://www.propbay.com/attachments/original/14873d1471582534-joker-s-pile-money-test2.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>€ N000</h2>
+        <p>Bob Smith: Description</p>
+      </div>
+      <h2 class="card-trip-pricing">4%</h2>
+    </div>
+  </div>
+
+  <div class="card-trip">
+    <img src="https://i.ytimg.com/vi/fls8VU7XClU/maxresdefault.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>€ N000</h2>
+        <p>Bob Smith: Description</p>
+      </div>
+      <h2 class="card-trip-pricing">7%</h2>
+    </div>
+  </div>
+
+<% end %>
+
+</div>
