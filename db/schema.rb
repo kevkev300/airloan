@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_172107) do
   create_table "offers", force: :cascade do |t|
     t.string "currency"
     t.integer "amount"
-    t.integer "interes"
+    t.integer "interest"
     t.text "description"
     t.text "bank_account"
     t.text "address"
