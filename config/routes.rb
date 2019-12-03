@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :loans, only: [:index]
 
-  resources :offers, only: [:index, :new, :create] do
+  resources :offers, only: [:index, :new, :create, :show] do
     resources :loans, only: [:new, :create]
   end
 end
