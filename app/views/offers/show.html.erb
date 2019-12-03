@@ -1,22 +1,27 @@
-<h1> <%= @offer.user.first_name%> </h1>
+<div class="container">
+  <h1> <%= @offer.user.first_name%>'s Loan</h1>
+</div>
 <div class="offer-img">
-  <img src="#" alt="" class="user-img">
+  <img src="https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555347972/shape/mentalfloss/istock_000045501888_medium.jpg" alt="" class="user-img" style="height: 30vh; width: 100vw; background-size: cover; object-fit: cover;">
 </div>
-<div class="body">
-  <h3>Loan's conditions </h3>
-  <ul class="list-inline">
-    <li><%= @offer.amount %></li>
-    <li><%=@offer.currency %></li>
-    <li><%=@offer.interest %></li>
-  </ul>
-</div>
+<div class="container" style="padding:30px 0 30px 0;">
+  <div class="body">
+    <h3>Loan's conditions </h3>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item"><i class="fas fa-coins"></i> <%= @offer.amount ? @offer.amount : "none" %></li>
+      <li class="list-group-item"><i class="fas fa-euro-sign"></i> <%=@offer.currency ? @offer.currency : "none" %></li>
+      <li class="list-group-item"><i class="fas fa-percentage"></i> <%= @offer.interest ? @offer.interest : "none"  %></li>
+    </ul>
+  </div>
 
-<div class="body-description-1">
-  <h3>about <%= @offer.user.first_name%>'s Loan</h3>
-  <p class="btn-flat">Request loan</p>
-</div>
-<div class="body-description-2">
-  <p>Lorem ipsum</p>
-  <p class="btn-ghost">Contact lender</p>
+  <div class="body-description-1">
+    <h3>about <%= @offer.user.first_name%>'s Loan</h3>
+    <p class="btn-flat">Request loan</p>
+  </div>
+  <div class="body-description-2">
+    <p><%= @offer.description ? @offer.description : "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivo" %></p>
+    <p class="btn-ghost">Contact lender</p>
+  </div>
+
 </div>
 
