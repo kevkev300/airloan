@@ -10,11 +10,11 @@
 
 <h1 style="margin-top: 20px;">Available Loans</h1>
 
-<% @offers.each do |offer| %>
-  <% link_to offer_path(offer.id) %>
-    <div class="cards">
+<div class="cards">
+  <% @offers.each do |offer| %>
+    <% link_to offer_path(offer.id) %>
       <div class="card-trip">
-        <image_tag <%= "#{offer.photo}" %> />
+        <%= cl_image_tag offer.photo, height: 150, width: 200, crop: :fill %>
         <div class="card-trip-infos">
           <div>
             <h2>Title here</h2>
@@ -26,54 +26,52 @@
       </div>
   <% end %>
 
-  <div class="cards">
-    <div class="card-trip">
-      <img src="https://i.pinimg.com/originals/91/8e/7a/918e7a39b2d71bd85d3e26cf6b42a1ec.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://avatarfiles.alphacoders.com/123/123018.jpg" class="card-trip-user avatar-bordered" />
+  <div class="card-trip">
+    <img src="https://i.pinimg.com/originals/91/8e/7a/918e7a39b2d71bd85d3e26cf6b42a1ec.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
       </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
+      <img src="https://avatarfiles.alphacoders.com/123/123018.jpg" class="card-trip-user avatar-bordered" />
     </div>
-
-    <div class="card-trip">
-      <img src="https://i.blogs.es/7d43be/snip_20191017171919/1366_2000.jpeg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-
-    <div class="card-trip">
-      <img src="https://www.propbay.com/attachments/original/14873d1471582534-joker-s-pile-money-test2.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-
-    <div class="card-trip">
-      <img src="https://i.ytimg.com/vi/fls8VU7XClU/maxresdefault.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-
   </div>
+
+  <div class="card-trip">
+    <img src="https://i.blogs.es/7d43be/snip_20191017171919/1366_2000.jpeg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+
+  <div class="card-trip">
+    <img src="https://www.propbay.com/attachments/original/14873d1471582534-joker-s-pile-money-test2.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+
+  <div class="card-trip">
+    <img src="https://i.ytimg.com/vi/fls8VU7XClU/maxresdefault.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+
 </div>
