@@ -1,4 +1,5 @@
 <%= simple_form_for (@offer) do |f| %>
+  <%= f.input :currency, value: "EUR", as: :hidden %>
   <%= f.input :amount, label: 'How much money do you want to lend (in EUR)?'%>
   <%= f.input :interest, collection: 0..100, label: 'Hwo much per interest do you want in % per annum?' %>
   <%= f.input :description, label: 'Please describe your loan conditions:' %>
