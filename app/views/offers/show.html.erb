@@ -1,18 +1,18 @@
-<h1> <%= @offer.user_id.fist_name%> </h1>
+<h1> <%= @offer.user.first_name%> </h1>
 <div class="offer-img">
-  <%=  image_tag(@offer.photo) %>
+  <img src="#" alt="" class="user-img">
 </div>
 <div class="body">
   <h3>Loan's conditions </h3>
   <ul class="list-inline">
-    <li><%= @Offer.amount %></li>
-    <li><%=@Offer.currency %></li>
-    <li><%=@Offer.interest %></li>
+    <li><%= @offer.amount %></li>
+    <li><%=@offer.currency %></li>
+    <li><%=@offer.interest %></li>
   </ul>
 </div>
 
 <div class="body-description">
-  <h3>about <%= @offer.user_id.first_name%></h3>
+  <h3>about <%= @offer.user.first_name%></h3>
   <p>Lorem ipsum</p>
   <p class="btn-flat">Request loan</p>
   <p class="btn-ghost">Contact lender</p>
