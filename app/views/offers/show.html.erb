@@ -6,7 +6,7 @@
     <div class="layout">
       <div class="image">
         <% if @offer.photo %>
-          <%= cl_image_tag @offer.photo, :style => "height: 50vh; width: 100%;"%>
+          <%= cl_image_tag @offer.photo, :style => "height: 50vh; width: 100%; object-fit: cover;"%>
         <% else %>
           <img src="https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555347972/shape/mentalfloss/istock_000045501888_medium.jpg" alt="" class="user-img" style="height: 50vh; width: 100%;">
         <% end %>
@@ -27,7 +27,7 @@
           </div>
           <div class="body-about-content">
             <p><%= @offer.description ? @offer.description : "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivo" %></p>
-            <p class="btn-flat-ghost">Contact lender</p>
+            <p class="btn-flat-ghost">Contact</p>
           </div>
         </div>
       </div>
