@@ -6,20 +6,32 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# @names = ["Norberto", "Jules", "Joseph", "Tyrone", "Edmund", "Minh", "Ervin", "Genaro", "Lindsey", "Cruz", "Zackary", "Carson", "Jason", "Alden", "Stan", "Wilburn", "Cyrus", "Andre", "Rashad", "Noah", "Tim", "Bret", "Donn", "Gregorio", "Hassan", "Jay", "Jeff", "Cletus", "Jon", "Monty", "Foster", "Curtis", "Earle", "Quentin", "Franklin", "Carlo", "Rudolf", "Mathew", "Roosevelt", "Antione", "Claud", "Jacques", "Whitney", "Colby", "Gerardo", "Williams", "Sebastian", "Rueben", "Maynard", "Ben"]
+@names = ["Norberto", "Jules", "Joseph", "Tyrone", "Edmund", "Minh", "Ervin", "Genaro", "Lindsey", "Cruz", "Zackary", "Carson", "Jason", "Alden", "Stan", "Wilburn", "Cyrus", "Andre", "Rashad", "Noah", "Tim", "Bret", "Donn", "Gregorio", "Hassan", "Jay", "Jeff", "Cletus", "Jon", "Monty", "Foster", "Curtis", "Earle", "Quentin", "Franklin", "Carlo", "Rudolf", "Mathew", "Roosevelt", "Antione", "Claud", "Jacques", "Whitney", "Colby", "Gerardo", "Williams", "Sebastian", "Rueben", "Maynard", "Ben"]
+@domains = ["gmail.com", "hotmail.com", "outlook.com", "hotmail.co.uk", "aol.com", "lewagon.com"]
 
-# def seed_users(n)
-#   User.destroy_all
-#   p "Destroying users"
-#   p "Seeding users"
-#   n.times do
-#     new = User.create(email: "#{@names[rand(50)]}@gmail.com", first_name: "#{@names[rand(50)]}", last_name: "#{@names[rand(50)]}")
-#     p "#{new.valid?}"
-#   end
-#   p "Seeded #{User.count} users"
-# end
+def seed_users(n)
+  old_count = User.count
+  p "#{old_count} existing users"
+  # p "Destroying dependencies (offers)"
+  # Offer.destroy_all
+  # p "Destroying users"
+  # User.destroy_all
+  p "Seeding new users"
+  n.times do
+    new_user = User.new(email: "#{@names[rand(0...50)]}_#{rand(50)}@#{@domains[rand(5)]}", password: "#{rand(100000..999999)}", first_name: @names[rand(0...50)], last_name: @names[rand(0...50)])
+    if new_user.valid?
+      new_user.save
+      p User.last
+      p "Total #{User.count} users"
+    else
+      p new_user.errors.messages
+    end
+  end
+  p new_count = "Seeded #{User.count - old_count} New Users"
+  p total_count = "#{User.count} Total Users"
+end
 
-# seed_users(10)
+seed_users(10)
 
 
 
