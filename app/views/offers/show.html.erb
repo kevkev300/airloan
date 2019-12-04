@@ -17,13 +17,13 @@
           <ul class="list-group list-group-horizontal">
             <li class="list-group-item"><i class="fas fa-coins"></i> <%= @offer.amount ? @offer.amount : "none" %></li>
             <li class="list-group-item"><i class="fas fa-euro-sign"></i></li>
-            <li class="list-group-item"><i class="fas fa-percentage"></i> <%= @offer.interest ? @offer.interest : "none"  %></li>
+            <li class="list-group-item"><%= @offer.interest ? @offer.interest : "none"  %> <i class="fas fa-percentage"></i></li>
           </ul>
         </div>
         <div class="body-about">
           <div class="body-about-content">
             <h3>About <%= @offer.user.first_name%>'s Loan</h3>
-            <p class="btn-flat">Request loan</p>
+            <p class="btn-flat text-center">Request loan</p>
           </div>
           <div class="body-about-content">
             <p><%= @offer.description ? @offer.description : "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivo" %></p>
