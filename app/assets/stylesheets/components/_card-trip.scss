@@ -49,3 +49,10 @@ text-decoration: none!important;
   top: -20px;
   width: 40px;
 }
+
+.card-trip a {
+
+  &:hover {
+    text-decoration: none;
+  }
+}

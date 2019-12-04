@@ -1,11 +1,12 @@
 <%= simple_form_for (@offer) do |f| %>
   <%= f.input :currency, as: :hidden, :input_html => { :value => "EUR" } %>
   <%= f.input :amount, label: 'How much money do you want to lend (in EUR)?'%>
-  <%= f.input :interest, collection: 0..100, label: 'How much per interest do you want in % per annum?' %>
+  <%= f.input :interest, collection: 0..100, label: 'How much interest do you want in % per annum?' %>
   <%= f.input :description, label: 'Please describe your loan conditions:' %>
   <%= f.input :bank_account, label: 'Please give your bank account from which the loan shall be drawn:' %>
   <%= f.input :address, label: 'Please give the address of your loan:' %>
-  <%= f.input :photo, label: 'Show off' %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit 'Post the loan offer' %>
+  <%#= f.input :photo, label: 'Upload your photo:' %>
+  <%#= f.input :photo_cache, as: :hidden %>
+  <%= f.input :photo, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
+  <%= f.submit 'Post the loan offer', :class => "btn btn-flat form_button" %>
 <% end %>
