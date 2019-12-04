@@ -22,7 +22,6 @@
 <div class="cards">
 
 <% if @offers.count.positive? %>
-
   <% @offers.each do |offer| %>
     <%= link_to offer_path(offer.id) do %>
       <div class="card-trip">
@@ -32,11 +31,9 @@
             <h2><%= "€ #{offer.amount.to_s[0..-4]},#{offer.amount.to_s[-3..-1]}" %></h2>
             <p><%= "#{offer.user.first_name} #{offer.user.last_name}" %></p>
           </div>
-          <h2 class="card-trip-pricing"><%= "#{offer.interest} %" %></h2>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
 
 <% else %>
 
