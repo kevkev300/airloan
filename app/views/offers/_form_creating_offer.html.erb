@@ -5,7 +5,8 @@
   <%= f.input :description, label: 'Please describe your loan conditions:' %>
   <%= f.input :bank_account, label: 'Please give your bank account from which the loan shall be drawn:' %>
   <%= f.input :address, label: 'Please give the address of your loan:' %>
-  <%= f.input :photo, label: 'Upload your picture:' %>
-  <%= f.input :photo_cache, as: :hidden %>
+  <%#= f.input :photo, label: 'Upload your photo:' %>
+  <%#= f.input :photo_cache, as: :hidden %>
+  <%= f.input :photo, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
   <%= f.submit 'Post the loan offer', :class => "btn btn-flat form_button" %>
 <% end %>
