@@ -20,6 +20,20 @@
   transition: background 0.3s ease;
 }
 
+.btn-flat-ghost {
+    color: #1EDD88;
+    background: rgba(0, 0, 0, 0);
+    padding: 8px 24px;
+    border-radius: 4px;
+    border-color: #1EDD88;
+    transition: background 0.3s ease;
+
+  &:hover {
+    color: #1EDD88;
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
 .btn-flat:hover {
   background: #1BCB7F;
   color: white;
