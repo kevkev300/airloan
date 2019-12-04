@@ -42,10 +42,10 @@ end
 def seed_users(n)
   old_count = User.count
   p "#{old_count} existing users"
-  p "Destroying dependencies (offers)"
-  Offer.destroy_all
-  p "Destroying users"
-  User.destroy_all
+  # p "Destroying dependencies (offers)"
+  # Offer.destroy_all
+  # p "Destroying users"
+  # User.destroy_all
   p "Seeding new users"
   n.times do
     new_user = User.new(email: "#{@names[rand(0...50)]}.#{@names[rand(0...50)]}_#{rand(50)}@#{@domains[rand(5)]}",
