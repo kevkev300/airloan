@@ -1,13 +1,25 @@
-.body-conditions {
-  display: flex;
-  justify-content: space-between;
 
-  padding: 10px;
+
+.body-conditions {
+
+  justify-content: space-between;
+  margin-bottom: 8px;
+  border-bottom-width: 2px;
+  border-bottom-color: rgba(0,0,0,0.1);
+  border-bottom-style: solid;
 }
 
 .body-about {
+   margin-top: 30px;
+}
+
+.body-about-content {
   display: flex;
   justify-content: space-between;
+}
 
+.list-group {
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 

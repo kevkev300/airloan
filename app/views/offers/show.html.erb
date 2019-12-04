@@ -9,8 +9,8 @@
   <% end %>
 </div>
 
-<div class="container" style="padding:30px 0 30px 0;">
-  <div class="body">
+<div class="container" style="padding:30px 0;">
+  <div class="body-conditions">
     <p><%= link_to "< Back to all loans", offers_path %></p>
     <h3>Loan's conditions </h3>
     <ul class="list-group list-group-horizontal">
@@ -20,13 +20,15 @@
     </ul>
   </div>
 
-  <div class="body-conditions">
-    <h3>about <%= @offer.user.first_name%>'s Loan</h3>
-    <p class="btn-flat">Request loan</p>
-  </div>
   <div class="body-about">
-    <p><%= @offer.description ? @offer.description : "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivo" %></p>
-    <p class="btn-ghost">Contact lender</p>
+    <div class="body-about-content">
+      <h3>About <%= @offer.user.first_name%>'s Loan</h3>
+      <p class="btn-flat">Request loan</p>
+    </div>
+    <div class="body-about-content">
+      <p><%= @offer.description ? @offer.description : "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivo" %></p>
+      <p class="btn-flat-ghost">Contact lender</p>
+    </div>
   </div>
 
 </div>
