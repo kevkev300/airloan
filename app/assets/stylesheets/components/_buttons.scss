@@ -18,6 +18,11 @@
   border-radius: 4px;
   background: #1EDD88;
   transition: background 0.3s ease;
+
+  &:hover {
+    background: #1BCB7F;
+    color: white;
+  }
 }
 
 .btn-flat-ghost {
@@ -32,11 +37,6 @@
     color: #1EDD88;
     background: rgba(0, 0, 0, 0.1);
   }
-}
-
-.btn-flat:hover {
-  background: #1BCB7F;
-  color: white;
 }
 
 .btn-gradient {
