@@ -11,6 +11,7 @@
 
 <div class="container" style="padding:30px 0 30px 0;">
   <div class="body">
+    <p><%= link_to "< Back to all loans", offers_path %></p>
     <h3>Loan's conditions </h3>
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item"><i class="fas fa-coins"></i> <%= @offer.amount ? @offer.amount : "none" %></li>
