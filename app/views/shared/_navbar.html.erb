@@ -1,3 +1,4 @@
+<!-- left side of navbar for the logo -->
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "/", class: "navbar-brand" do %>
     <i class="fas fa-comments-dollar"></i>
@@ -8,7 +9,8 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
+<!-- right side of the logo for navigation and menu -->
+<!-- menu that changes if user is logged in or not -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
@@ -27,6 +29,7 @@
         </li>
       <% end %>
 
+<!-- dropdown menu that changes if user is logged in or not -->
       <li class="nav-item my-auto">
         <div class="dropdown">
           <i class="fas fa-bars" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
