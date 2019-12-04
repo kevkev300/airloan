@@ -13,7 +13,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item nav-btn">
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          <%= link_to "Search loans", offers_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item nav-btn">
+          <%= link_to "Create a loan", new_offer_path, class: "nav-link" %>
         </li>
       <% else %>
         <li class="nav-item nav-btn">
@@ -23,8 +26,20 @@
           <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
         </li>
       <% end %>
+
       <li class="nav-item my-auto">
-        <i class="fas fa-bars"></i>
+        <div class="dropdown">
+          <i class="fas fa-bars" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <%= link_to "Home", "/", class: "dropdown-item" %>
+            <% if user_signed_in? %>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <% else %>
+              <%= link_to "Search loans", offers_path, class: "dropdown-item" %>
+              <%= link_to "Create a loan", new_offer_path, class: "dropdown-item" %>
+            <% end %>
+          </div>
+        </div>
       </li>
     </ul>
   </div>

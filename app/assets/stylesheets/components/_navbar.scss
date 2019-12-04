@@ -31,5 +31,12 @@ i {
 .nav-item i {
   color: #4A4A4A;
   font-size: 1.5rem;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
+   &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
 }
 
