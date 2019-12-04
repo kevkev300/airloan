@@ -3,8 +3,7 @@
   background: white;
 }
 
-#nav-btn {
-
+.nav-btn {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
   padding: 0px 24px;
@@ -28,3 +27,9 @@
 i {
   color: #1EDD88;
 }
+
+.nav-item i {
+  color: #4A4A4A;
+  font-size: 1.5rem;
+}
+
