@@ -1,4 +1,4 @@
-.body-main {
+.layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
@@ -6,35 +6,35 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .body-main {
+  .layout {
     grid-template-columns: 1fr;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .body-main {
+  .layout {
     grid-template-columns: 1fr;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .body-main {
+  .layout {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .body-main {
+  .layout {
     grid-template-columns: 1fr 1fr
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .body-main {
+  .layout {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -62,5 +62,9 @@
 .list-group {
   margin-bottom: 30px;
   margin-top: 20px;
+}
+
+.list-group-item {
+  background: none;
 }
 
