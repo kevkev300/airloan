@@ -2,7 +2,15 @@ class OffersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @offers = Offer.all
+    @offers = Offer.geocoded
+    @markers = @offers.map do |offer|
+      {
+        lat: offer.latitude,
+        lng: offer.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { offer: offer }),
+        image_url: helpers.asset_url('fontawesome-dollar-solid.svg')
+      }
+    end
   end
 
   def show

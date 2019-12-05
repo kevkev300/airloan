@@ -1,6 +1,8 @@
 class Offer < ApplicationRecord
   belongs_to :user
   has_many :loans
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   # validations
   validates :currency, presence: true, allow_blank: false
