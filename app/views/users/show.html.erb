@@ -21,8 +21,8 @@
               Until: <%= loan.end_date %></br>
               Total price: <%= loan.total_price %>
             </div>
-            <%= link_to "Accept", "#" %>
-            <%= link_to "Decline", "#" %>
+            <%= link_to "Accept", accepted_by_lender_path %>
+            <%= link_to "Decline", declined_by_lender_path %>
           <% end %>
         </div>
       <% end %>
