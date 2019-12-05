@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   end
 
   resources :offers, only: [:index, :new, :create, :show] do
-    resources :loans, only: [:new, :create]
+    resources :loans, only: [:create]
   end
 end

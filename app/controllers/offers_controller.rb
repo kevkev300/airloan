@@ -15,6 +15,7 @@ class OffersController < ApplicationController
 
   def show
     @offer = Offer.find(params[:id])
+    @loan = Loan.new
   end
 
   def new
