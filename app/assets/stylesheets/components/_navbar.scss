@@ -8,11 +8,11 @@
 }
 
 .nav-btn {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 0px 24px;
+  color: #7d29e7;
+  padding: 0;
   margin-right: 10px;
   border-radius: 50px;
+  font-size: 20px;
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
@@ -24,17 +24,18 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
+// .navbar-lewagon .navbar-brand img {
+//   width: 20px;
+// }
 
-i {
-  color: #1EDD88;
+.fa-comments-dollar {
+  color: #7F46E7;
+  font-size: 40px;
 }
 
 .nav-item i {
-  color: #4A4A4A;
-  font-size: 1.5rem;
+  color: #7F46E7;
+  font-size: 2rem;
   opacity: 0.6;
   transition: opacity 0.3s ease;
 
@@ -44,3 +45,7 @@ i {
   }
 }
 
+.navbar-logo-with-text {
+  font-size: 40px;
+  margin: 0px;
+}

@@ -1,38 +1,61 @@
-<html>
-
-  <div class="container">
-      <p><%= link_to "< Back to all loans", offers_path %></p>
-      <h1> <%= @offer.user.first_name%>'s Loan</h1>
-    <div class="layout">
-      <div class="image">
-        <% if @offer.photo %>
-          <%= cl_image_tag @offer.photo, :style => "height: 50vh; width: 100%; object-fit: cover;"%>
-        <% else %>
-          <img src="https://miro.medium.com/max/1125/0*gkc2Yz8yPBqtnRAS" alt="" class="user-img" style="height: 50vh; width: 100%;">
-        <% end %>
-     </div>
-      <div class="body-category">
-        <div class="body-conditions">
-          <h3>Loan's conditions </h3>
-          <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><i class="fas fa-coins"></i> <%= @offer.amount ? @offer.amount : "none" %></li>
-            <li class="list-group-item"><i class="fas fa-euro-sign"></i></li>
-            <li class="list-group-item"><%= @offer.interest ? @offer.interest : "none"  %> <i class="fas fa-percentage"></i></li>
-          </ul>
+<!-- <div class="container"> -->
+  <div class="layout">
+    <div class="body-category">
+    <p><%= link_to "< Back to all loans", offers_path %></p>
+    <h1> <%= @offer.user.first_name%>'s Loan</h1>
+      <div class="body-conditions">
+        <h3>Loan's conditions </h3>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item"><i class="fas fa-coins"></i> <%= @offer.amount ? @offer.amount : "none" %></li>
+          <li class="list-group-item"><i class="fas fa-euro-sign"></i></li>
+          <li class="list-group-item"><%= @offer.interest ? @offer.interest : "none"  %> <i class="fas fa-percentage"></i></li>
+        </ul>
+      </div>
+      <div class="body-about">
+        <div class="body-about-content">
+          <h3>About <%= @offer.user.first_name%>'s Loan</h3>
+          <p class="btn-flat text-center">Request loan</p>
         </div>
-        <div class="body-about">
-          <div class="body-about-content">
-            <h3>About <%= @offer.user.first_name%>'s Loan</h3>
-            <p class="btn-flat text-center">Request loan</p>
+        <div class="body-about-content">
+          <p><%= @offer.description ? @offer.description : "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivo" %></p>
+          <p class="btn-flat-ghost">Contact</p>
+        </div>
+      </div>
+      <div class="body-reviews">
+        <div class="body-reviews-card">
+          <img src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/ul03dampdb9to6qumjcj.jpg" />
+          <div class="body-reviews-infos">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fas fa-star"></i></li>
+              <li class="list-inline-item"><i class="far fa-star"></i></li>
+              <li class="list-inline-item"><i class="far fa-star"></i></li>
+              <li class="list-inline-item"><i class="far fa-star"></i></li>
+            </ul>
+            <h2>Ellyn</h2>
+            <p> I took a loan from <%= @offer.user.first_name %>. <strong>Never again! </strong></p>
           </div>
-          <div class="body-about-content">
-            <p><%= @offer.description ? @offer.description : "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivo" %></p>
-            <p class="btn-flat-ghost">Contact</p>
+        </div>
+        <div class="body-reviews-card">
+          <img src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/y2zcqbdwqc8x6uz1xlop.jpg" />
+          <div class="body-reviews-infos">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fas fa-star"></i></li>
+              <li class="list-inline-item"><i class="fas fa-star"></i></li>
+              <li class="list-inline-item"><i class="fas fa-star"></i></li>
+              <li class="list-inline-item"><i class="fas fa-star"></i></li>
+            </ul>
+            <h2>Gus</h2>
+            <p><%= @offer.user.first_name %>'s loan helped me buy a motorbike, he is a very good lender. I refunded with a year delay but at least paid him a beer <strong>we are squared </strong></p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</html>
 
+    <% if @offer.address %>
+      <div id="map" style=" object-fit: cover; width: 100%; height: 100vh; position: sticky; top: 0;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    <% else %>
+        <img src="https://miro.medium.com/max/1125/0*gkc2Yz8yPBqtnRAS" alt="" class="image" style="object-fit: cover; width: 100%; height: 100vh; position: sticky; top: 0;">
+    <% end %>
+</div>
+<!-- </div> -->
 
