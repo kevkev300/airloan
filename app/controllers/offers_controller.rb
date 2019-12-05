@@ -8,7 +8,7 @@ class OffersController < ApplicationController
         lat: offer.latitude,
         lng: offer.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { offer: offer }),
-        image_url: helpers.asset_url('fontawesome-dollar-solid.svg')
+        image_url: helpers.asset_url('https://res.cloudinary.com/kl3000/image/upload/v1575565500/fontawesome-dollar-solid_uj4aat.svg')
       }
     end
   end
