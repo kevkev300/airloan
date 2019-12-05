@@ -1,6 +1,6 @@
 <%= simple_form_for [@offer, @loan] do |f| %>
   <%= f.input :start_date, label: 'From:' %>
   <%= f.input :end_date, label: 'Until (payback day):' %>
-  <%= f.submit 'Request loan' %>
+  <%= f.submit 'Request loan', class: "btn btn-flat" %>
 <% end %>
 
