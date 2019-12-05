@@ -7,7 +7,61 @@
 
   <!-- all user's  loans (as lender) -->
   <div>
+    <div class="pending-offers">
+      <h2>Your pending offers</h2>
+      <% current_user.offers.each do |offer| %>
+        <% offer.loans.each do |loan| %>
+          <% if loan.status == "pending" %>
+            <h3><%= loan.user.first_name %> asks you for a loan</h3>
+            <div class="loan-info">
+              Requester: <%= loan.user.first_name %> <%= loan.user.last_name %> </br>
+              Loan amount: <%= offer.amount %></br>
+              From: <%= loan.start_date %></br>
+              Until: <%= loan.end_date %></br>
+              Total price: <%= loan.total_price %>
+            </div>
+            <%= link_to "Accept", accepted_by_lender_loan_path(loan) %>
+            <%= link_to "Decline", declined_by_lender_loan_path(loan) %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
 
+    <div class="pending-offers">
+      <h2>Your accepted offers</h2>
+      <% current_user.offers.each do |offer| %>
+        <% offer.loans.each do |loan| %>
+          <% if loan.status == "accepted" %>
+            <h3><%= loan.user.first_name %> asks you for a loan</h3>
+            <div class="loan-info">
+              Requester: <%= loan.user.first_name %> <%= loan.user.last_name %> </br>
+              Loan amount: <%= offer.amount %></br>
+              From: <%= loan.start_date %></br>
+              Until: <%= loan.end_date %></br>
+              Total price: <%= loan.total_price %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="pending-offers">
+      <h2>Your declined offers</h2>
+      <% current_user.offers.each do |offer| %>
+        <% offer.loans.each do |loan| %>
+          <% if loan.status == "declined" %>
+            <h3><%= loan.user.first_name %> asks you for a loan</h3>
+            <div class="loan-info">
+              Requester: <%= loan.user.first_name %> <%= loan.user.last_name %> </br>
+              Loan amount: <%= offer.amount %></br>
+              From: <%= loan.start_date %></br>
+              Until: <%= loan.end_date %></br>
+              Total price: <%= loan.total_price %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 
   <!-- all user's loans (as seeker) -->
