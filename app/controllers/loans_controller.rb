@@ -5,7 +5,14 @@ class LoansController < ApplicationController
 
   def create
     loan = Loan.new(params_loan)
-    raise
+    loan.user = current_user
+    loan.offer = Offer.find(params[:offer_id])
+
+    if loan.save!
+      redirect_to user_path(current_user)
+    else
+      render "offers/show"
+    end
   end
 
   def accepted
