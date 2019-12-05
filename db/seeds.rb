@@ -49,14 +49,14 @@ def seed_users(n)
   p "Seeding new users"
   n.times do
     new_user = User.new(email: "#{@names[rand(0...50)]}.#{@names[rand(0...50)]}_#{rand(50)}@#{@domains[rand(5)]}",
-    password: "#{rand(100000..999999)}",
+    password: "123456",
     first_name: @names[rand(0...50)],
     last_name: @names[rand(0...50)])
     if new_user.valid?
       new_user.save
       p User.last
       p "New User No. #{User.count}"
-      seed_loan_offers(rand(0..10))
+      seed_loan_offers(rand(0..3))
     else
       p new_user.errors.messages
     end

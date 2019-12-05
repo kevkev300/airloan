@@ -16,26 +16,30 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
+  background: #7d29e7;
   transition: background 0.3s ease;
 
   &:hover {
-    background: #1BCB7F;
+    background: rgb(105, 21, 211);
     color: white;
   }
 }
 
 .btn-flat-ghost {
-    color: #1EDD88;
+    color: #7d29e7;
     background: rgba(0, 0, 0, 0);
     padding: 8px 24px;
     border-radius: 4px;
-    border-color: #1EDD88;
+    border-color: #7d29e7;
+    border-width: 2px;
+    border-style: solid;
     transition: background 0.3s ease;
+    text-align: center;
 
   &:hover {
-    color: #1EDD88;
-    background: rgba(0, 0, 0, 0.1);
+    color: rgb(105, 21, 211);
+    border-color: rgb(105, 21, 211);
+    background: rgba(105, 21, 211, 0.1);
   }
 }
 
