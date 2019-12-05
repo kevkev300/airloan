@@ -2,12 +2,31 @@
 <div class="container">
   <!-- all user's offers (lender)-->
   <div>
-
+    <h1>hasdjkfhk</h1>
+    <h1>fhsjkdfhjk</h1>
   </div>
 
   <!-- all user's  loans (as lender) -->
   <div>
-
+    <h2>Your offers</h2>
+    <% current_user.offers.each do |offer| %>
+      <% offer.loans.each do |loan| %>
+      <div class="pending-offers">
+          <% if loan.status = "pending" %>
+            <h3><%= loan.user.first_name %> ask you for an offer</h3>
+            <div class="loan-info">
+              Requester: <%= loan.user.first_name %> <%= loan.user.last_name %> </br>
+              Loan amount: <%= offer.amount %></br>
+              From: <%= loan.start_date %></br>
+              Until: <%= loan.end_date %></br>
+              Total price: <%= loan.total_price %>
+            </div>
+            <%= link_to "Accept", "#" %>
+            <%= link_to "Decline", "#" %>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 
   <!-- all user's loans (as seeker) -->
