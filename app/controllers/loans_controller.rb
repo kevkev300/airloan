@@ -3,7 +3,7 @@ class LoansController < ApplicationController
   end
 
   def create
-
+    raise
   end
 
   def accepted

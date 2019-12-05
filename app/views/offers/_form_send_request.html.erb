@@ -1,4 +1,4 @@
-<%= simple_form_for (@loan) do |f| %>
+<%= simple_form_for [@offer, @loan] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.submit %>
