@@ -24,17 +24,17 @@
   <% if @offers.count.positive? %>
     <% @offers.each do |offer| %>
       <%= link_to offer_path(offer.id) do %>
-    <div class="card-trip">
-      <%= cl_image_tag offer.photo, height: 150, width: 200, crop: :fill %>
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= "€ #{offer.amount.to_s[0..-4]},#{offer.amount.to_s[-3..-1]}" %></h2>
-          <p><%= "#{offer.user.first_name} #{offer.user.last_name}" %></p>
+        <div class="card-trip">
+          <%= cl_image_tag offer.photo, height: 150, width: 200, crop: :fill %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= "€ #{offer.amount.to_s[0..-4]},#{offer.amount.to_s[-3..-1]}" %></h2>
+              <p><%= "#{offer.user.first_name} #{offer.user.last_name}" %></p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
       <% end %>
-      <% end %>
+    <% end %>
   <% else %>
       <div class="card-trip">
         <img src="https://i.pinimg.com/originals/91/8e/7a/918e7a39b2d71bd85d3e26cf6b42a1ec.jpg" />
