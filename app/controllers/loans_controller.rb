@@ -1,8 +1,10 @@
+
 class LoansController < ApplicationController
   def index
   end
 
   def create
+    loan = Loan.new(params_loan)
     raise
   end
 
@@ -24,5 +26,9 @@ class LoansController < ApplicationController
 
   def find_loan
     Loan.find(params[:id])
+  end
+
+  def params_loan
+    params.require(:loan).permit(:start_date, :end_date, :total_price)
   end
 end
