@@ -7,6 +7,7 @@ class LoansController < ApplicationController
     loan = Loan.new(params_loan)
     loan.user = current_user
     loan.offer = Offer.find(params[:offer_id])
+    loan.total_price = total_price(loan)
 
     if loan.save!
       redirect_to user_path(current_user)
@@ -36,6 +37,17 @@ class LoansController < ApplicationController
   end
 
   def params_loan
-    params.require(:loan).permit(:start_date, :end_date, :total_price)
+    params.require(:loan).permit(:start_date, :end_date)
+  end
+
+  def total_price(loan)
+    amount = loan.offer.amount
+    year_interest = loan.offer.interest.to_f / 100
+    days = (loan.end_date - loan.start_date).to_f
+
+    day_interest = year_interest / 365
+    day_price = day_interest * amount
+
+    return (days * day_price).round
   end
 end
