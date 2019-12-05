@@ -1,6 +1,8 @@
 class Offer < ApplicationRecord
   belongs_to :user
   has_many :loans
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   # validations
   validates :currency, presence: true, allow_blank: false
@@ -9,8 +11,6 @@ class Offer < ApplicationRecord
   validates :description, presence: true, allow_blank: false
   validates :bank_account, presence: true, allow_blank: false
   validates :address, presence: true, allow_blank: false
-  validates :latitude, presence: true, allow_blank: false
-  validates :longitude, presence: true, allow_blank: false
 
   mount_uploader :photo, PhotoUploader
 end
