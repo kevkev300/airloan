@@ -24,9 +24,11 @@
               </div>
             </div>
           </div>
-          <div class="form" style="margin-top: 5px; margin-bottom: 30px;">
-            <%= render "offers/form_send_request" %>
-          </div>
+          <% unless @offer.user == current_user %>
+            <div class="form" style="margin-top: 5px; margin-bottom: 30px;">
+                <%= render "offers/form_send_request" %>
+            </div>
+          <% end %>
         </div>
       <div class="body-reviews">
         <h3>Reviews</h3>
