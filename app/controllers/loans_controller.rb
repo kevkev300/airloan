@@ -4,12 +4,13 @@ class LoansController < ApplicationController
   end
 
   def create
-    loan = Loan.new(params_loan)
-    loan.user = current_user
-    loan.offer = Offer.find(params[:offer_id])
-    loan.total_price = total_price(loan)
+    @loan = Loan.new(params_loan)
+    @loan.user = current_user
+    @offer = Offer.find(params[:offer_id])
+    @loan.offer = @offer
+    @loan.total_price = total_price(@loan)
 
-    if loan.save!
+    if @loan.save
       redirect_to user_path(current_user)
     else
       render "offers/show"
@@ -37,7 +38,7 @@ class LoansController < ApplicationController
   end
 
   def params_loan
-    params.require(:loan).permit(:start_date, :end_date)
+    params.require(:loan).permit(:start_date, :end_date, :seeker_bank_account)
   end
 
   def total_price(loan)
