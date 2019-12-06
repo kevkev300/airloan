@@ -3,6 +3,14 @@
   width: 100vw;
 }
 
+.mapboxgl-ctrl-bottom-right {
+  visibility: hidden;
+}
+
+.mapboxgl-ctrl-top-right {
+  top: 80px !important;
+}
+
 .mapboxgl-popup {
   max-width: 200px;
 }
