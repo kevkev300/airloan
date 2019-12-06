@@ -14,10 +14,10 @@
   border-radius: 50px;
   font-size: 20px;
   font-weight: lighter;
-  opacity: 0.6;
+  opacity: 1;
   transition: opacity 0.3s ease;
     &:hover {
-      opacity: 1;
+      opacity: 0.6;
     }
 }
 .navbar-lewagon .navbar-collapse {
@@ -35,12 +35,12 @@
 
 .nav-item i {
   color: #7F46E7;
-  font-size: 2rem;
-  opacity: 0.6;
+  font-size: 1.2rem;
+  opacity: 1;
   transition: opacity 0.3s ease;
 
    &:hover {
-    opacity: 1;
+    opacity: 0.6;
     cursor: pointer;
   }
 }
@@ -48,4 +48,14 @@
 .navbar-logo-with-text {
   font-size: 40px;
   margin: 0px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #7F46E7;
+  font-size: 1.1rem;
+  opacity: 1;
+    &:hover {
+      color: #7F46E7;
+      opacity: 0.6;
+    }
 }
