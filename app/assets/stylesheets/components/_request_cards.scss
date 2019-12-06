@@ -1,0 +1,50 @@
+.request-info {
+  flex: 1;
+}
+.request-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 16px 0px;
+  height: 150px;
+}
+
+.request-card img {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
+}
+
+.request-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.request-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.request-buttons {
+  padding: 40px;
+}
+
+.request-info {
+  padding: 40px;
+}
+
+.request-button {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.accepted {
+  color: rgb(131, 97, 231);
+}
