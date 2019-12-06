@@ -27,7 +27,15 @@
           <%= cl_image_tag offer.photo, height: 150, width: 200, crop: :fill %>
           <div class="card-trip-infos">
             <div>
-              <h2><%= "€ #{offer.amount.to_s[0..-4]},#{offer.amount.to_s[-3..-1]}" %></h2>
+              <h2>
+                <% if offer.amount >= 1_000 %>
+                  <%= "€ #{offer.amount.to_s[0..-4]}.#{offer.amount.to_s[-3..-1]},00" %>
+                <% elsif offer.amount >= 1_000_000 %>
+                  <%= "€ #{offer.amount.to_s[0..-7]}.#{offer.amount.to_s[-6..-4]}.#{offer.amount.to_s[-3..-1]},00" %>
+                <% else %>
+                  <%= "€ #{offer.amount.to_s},00" %>
+                <% end %>
+              </h2>
               <p><%= "#{offer.user.first_name} #{offer.user.last_name}" %></p>
             </div>
             <h2 class="card-trip-pricing"><%= "#{offer.interest} %" %></h2>
@@ -42,8 +50,8 @@
       <img src="https://i.pinimg.com/originals/91/8e/7a/918e7a39b2d71bd85d3e26cf6b42a1ec.jpg" />
       <div class="card-trip-infos">
         <div>
-          <h2>€ 3.500</h2>
-          <p>Bob Smith: Description</p>
+          <h2>€ X.000,00</h2>
+          <p>THIS IS THE PLACEHOLDER</p>
         </div>
         <h2 class="card-trip-pricing">5%</h2>
       </div>
@@ -53,8 +61,8 @@
       <img src="https://i.blogs.es/7d43be/snip_20191017171919/1366_2000.jpeg" />
       <div class="card-trip-infos">
         <div>
-          <h2>€ 10.000</h2>
-          <p>Bob Smith: Description</p>
+          <h2>€ X.000,00</h2>
+          <p>THIS IS THE PLACEHOLDER</p>
         </div>
         <h2 class="card-trip-pricing">6%</h2>
       </div>
@@ -64,8 +72,8 @@
       <img src="https://www.propbay.com/attachments/original/14873d1471582534-joker-s-pile-money-test2.jpg" />
       <div class="card-trip-infos">
         <div>
-          <h2>€ 6.000</h2>
-          <p>Bob Smith: Description</p>
+          <h2>€ X.000,00</h2>
+          <p>THIS IS THE PLACEHOLDER</p>
         </div>
         <h2 class="card-trip-pricing">4%</h2>
       </div>
@@ -75,8 +83,8 @@
       <img src="https://i.ytimg.com/vi/fls8VU7XClU/maxresdefault.jpg" />
       <div class="card-trip-infos">
         <div>
-          <h2>€ 2.000</h2>
-          <p>Bob Smith: Description</p>
+          <h2>€ X.000,00</h2>
+          <p>THIS IS THE PLACEHOLDER</p>
         </div>
         <h2 class="card-trip-pricing">7%</h2>
       </div>
