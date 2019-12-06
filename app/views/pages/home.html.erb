@@ -1,10 +1,25 @@
 
 <div class="banner" style="background-image: url(<%= cl_image_path "https://res.cloudinary.com/kl3000/image/upload/v1575565262/airloan_bg_st5qfs.png" %>);">
   <div class="container">
-    <h1 style="font-size: 61px">Missing a fiver?</h1>
-    <p style="font-size: 32px">Why not <strong>borrow</strong> ten?</p>
+    <div class="container">
+      <div style="
+        background-color: rgb(125, 41, 231);
+        width: 45%;
+        padding-left:  3px;
+        background-blend-mode: color;">
+        <h1 style="font-size: 61px"> Missing a fiver?</h1>
+      </div>
+      <div style="
+        background-color: white;
+        width: 31%;
+
+        padding-left: 5px;
+        font-size: 32px;">
+        <p style="font-size: 32px;  color: rgb(125, 41, 231); text-shadow: none;">Why not <strong>borrow</strong> ten?</p>
+      </div>
+
     <%= link_to "Search loans", offers_path, class: "btn btn-flat mr-2" %>
-    <%= link_to "Create a new loan...", new_offer_path, class: "btn btn-flat-ghost ml-2" %>
+    <%= link_to "Post Loans", new_offer_path, class: "btn btn-flat-ghost ml-2" %>
   </div>
 </div>
 
