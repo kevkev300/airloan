@@ -1,4 +1,5 @@
-<p><%= offer.address %></p>
-<p><%= offer.user.first_name %> <%= offer.user.last_name %></p>
-<p><%= offer.amount %> €</p>
-<p><%= offer.interest %> %</p>
+<p><strong>Address:</strong> <%= offer.address %></p>
+<p><strong>Name:</strong> <%= offer.user.first_name %> <%= offer.user.last_name %></p>
+<p><strong>Amount:</strong> <%= offer.amount %> €</p>
+<p><strong>Interest:</strong> <%= offer.interest %> %</p>
+<%= link_to "See loan", offer_path(offer.id), class: 'btn-popup' %>

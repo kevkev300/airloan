@@ -8,6 +8,16 @@
 }
 
 .mapboxgl-popup-content {
-  text-align: center;
   font-family: 'Open Sans', sans-serif;
+  padding-top: 30px;
+  border-radius: 10px;
+}
+
+.btn-popup {
+  color: white;
+  background-color: #7d29e7;
+  box-shadow: 4px 4px 4px rgba(0,0,0,.1);
+  border: 1px solid #7d29e7;
+  padding: 5px 15px;
+  border-radius: 50px;
 }
