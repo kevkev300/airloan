@@ -1,4 +1,50 @@
 <!-- !!!!! This page is not finished and until now just used to se backend output !!!!! -->
+<div class="container-user-show">
+  <div class="user-data">
+    <h1>Hello <%= current_user.first_name %>, how are you today? </h1>
+    <p> Registered in <%= current_user.created_at.year %> </p>
+  </div>
+
+  <div class="body-user-show">
+    <div class="as-seeker">
+      <h2>My borrows</h2>
+
+    </div>
+
+    <div class="as-lender">
+      <div class="requests-lender">
+        <h2>My lendings</h2>
+
+      </div>
+
+      <div class="offers">
+        <h2>My loan offers</h3>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
   <!-- all user's offers (lender)-->
   <div>
