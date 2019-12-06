@@ -1,7 +1,9 @@
-<%= simple_form_for [@offer, @loan] do |f| %>
-  <%= f.input :start_date, label: 'From:' %>
-  <%= f.input :end_date, label: 'Until (payback day):' %>
-  <%= f.input :seeker_bank_account, label: 'Bank account to receive loan:' %>
-  <%= f.submit 'Request loan', class: "btn btn-flat", :style => "width: 100%" %>
-<% end %>
+
+
+    <%= simple_form_for [@offer, @loan] do |f| %>
+      <%= f.input :start_date, label: 'From:' %>
+      <%= f.input :end_date, label: 'Until (payback day):' %>
+      <%= f.input :seeker_bank_account, label: 'Bank account to receive loan:' %>
+      <%= f.submit 'Request loan', class: "btn btn-flat", :style => "width: 100%" %>
+    <% end %>
 
