@@ -1,8 +1,8 @@
 .layout {
-  display: grid;
-  grid-template-columns: 5fr 2fr;
-  grid-gap: 30px;
-  margin-top: 80px;
+  // display: grid;
+  // grid-template-columns: 5fr 2fr;
+  // grid-gap: 30px;
+  // margin-top: 80px;
 }
 
 // Smallest device
@@ -49,7 +49,6 @@
   grid-template-columns: 3fr 2fr;
   grid-gap: 5px;
   margin-bottom: 30px;
-  margin-top: 30px;
   border-bottom-width: 2px;
   border-bottom-color: rgba(0,0,0,0.1);
   border-bottom-style: solid;
