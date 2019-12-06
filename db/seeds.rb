@@ -343,4 +343,4 @@ def seed_users(n)
   p total_count = "#{User.count} Total Users"
 end
 
-seed_users(40)
+seed_users(30)

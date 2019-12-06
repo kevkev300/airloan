@@ -3,7 +3,13 @@
     <div class="row justify-content-center form_row">
       <div class="form col-12 col-lg-8">
 
-        <h1>Add your loan offer</h1>
+        <div style="
+        background-color: rgb(125, 41, 231);
+        width: 38%;
+        padding-left:  3px;
+        background-blend-mode: color;">
+        <h1 style="font-size: 40px; color: white; font-weight: lighter;"> Add your <strong style="font-weight:bold">loan</strong></h1>
+      </div>
         <%= render 'form_creating_offer' %>
         <br>
         <%= link_to "Back to list", offers_path, class: 'btn btn-flat-ghost' %>

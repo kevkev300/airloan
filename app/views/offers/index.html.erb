@@ -5,7 +5,7 @@
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
 
-    <div class="container" style="text-align: center;">
+    <div class="container">
 
         <%= simple_form_for :search, url: offers_path, method: :get do |f| %>
 
@@ -16,8 +16,13 @@
           </button>
         </div>
         <% end %>
-
-        <h1 style="margin-top: 20px;">Available Loans</h1>
+        <div style="
+        width: 100%;
+        margin: 20px 0px;
+        background-color: rgba(254, 243, 6,0.8)
+        ">
+        <h1 style="padding-left: 3px; font-size: 32px; background-color: white; font-weight: lighter; color: rgb(125, 41, 231); text-shadow: none; width: 23%;">Available <strong style="font-weight: bold;">Loans</strong></h1>
+        </div>
 
         <div class="cards">
 
