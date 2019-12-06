@@ -2,7 +2,11 @@ class OffersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @offers = Offer.geocoded
+    if params[:query]
+      @offers = Offer.near(params[:query])
+    else
+      @offers = Offer.geocoded
+    end
     @markers = @offers.map do |offer|
       {
         lat: offer.latitude,
