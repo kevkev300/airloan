@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_05_193223) do
+ActiveRecord::Schema.define(version: 2019_12_06_110839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_12_05_193223) do
     t.bigint "offer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "seeker_bank_account"
     t.index ["offer_id"], name: "index_loans_on_offer_id"
     t.index ["user_id"], name: "index_loans_on_user_id"
   end
