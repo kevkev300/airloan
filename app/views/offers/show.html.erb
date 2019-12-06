@@ -8,7 +8,7 @@
           <div class="body-category">
           <p><%= link_to "< Back to all loans", offers_path %></p>
             <div class="body-conditions-avatar">
-              <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+              <%= cl_image_tag @offer.photo, class: "avatar-large", alt: "avatar-large" %>
               <h1> <%= @offer.user.first_name%>'s Loan</h1>
             </div>
             <div class="conditions-list">
@@ -24,9 +24,11 @@
               </div>
             </div>
           </div>
-          <div class="form" style="margin-top: 5px; margin-bottom: 30px;">
-            <%= render "offers/form_send_request" %>
-          </div>
+          <% unless @offer.user == current_user %>
+            <div class="form" style="margin-top: 5px; margin-bottom: 30px;">
+                <%= render "offers/form_send_request" %>
+            </div>
+          <% end %>
         </div>
       <div class="body-reviews">
         <h3>Reviews</h3>
