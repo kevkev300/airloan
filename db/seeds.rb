@@ -19,10 +19,10 @@ old_count = Offer.count
   p "#{old_count} existing offers"
   p "Seeding new offers"
   n.times do
-    new_offer = Offer.new(amount: rand(100..50_000),
+    new_offer = Offer.new(amount: (100 * rand(1..500)),
       currency: "EUR",
       interest: rand(2..20),
-      description: @descriptions[rand(0..5)],
+      description: @descriptions[rand(0..(@descriptions.length))],
       bank_account: rand(100000000000..999999999999),
       address: "#{@street_type[rand(0..3)]} de #{@street_name[rand(0..(@street_name.length))]}",
       user_id: User.last.id,
