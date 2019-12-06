@@ -65,7 +65,7 @@
       </div>
 
       <% if current_user.offers.count > 0 %>
-      <h2>My posted loans</h3>
+      <h2 style="padding-bottom: 20px">My posted loans</h3>
         <div class="offers">
           <% current_user.offers.each do |offer| %>
             <%= link_to offer_path(offer.id) do %>
