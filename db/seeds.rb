@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-@names = ["Norberto", "Jules", "Joseph", "Tyrone", "Edmund", "Minh", "Ervin", "Genaro", "Lindsey", "Cruz", "Zackary", "Carson", "Jason", "Alden", "Stan", "Wilburn", "Cyrus", "Andre", "Rashad", "Noah", "Tim", "Bret", "Donn", "Gregorio", "Hassan", "Jay", "Jeff", "Cletus", "Jon", "Monty", "Foster", "Curtis", "Earle", "Quentin", "Franklin", "Carlo", "Rudolf", "Mathew", "Roosevelt", "Antione", "Claud", "Jacques", "Whitney", "Colby", "Gerardo", "Williams", "Sebastian", "Rueben", "Maynard", "Ben"]
+@names = ["Norberto", "Jules", "Joseph", "Tyrone", "Edmund", "Minh", "Ervin", "Genaro", "Lindsey", "Cruz", "Zackary", "Carson", "Jason", "Alden", "Stan", "Wilburn", "Cyrus", "Andre", "Rashad", "Noah", "Tim", "Bret", "Donn", "Gregorio", "Hassan", "Jay", "Jeff", "Cletus", "Jon", "Monty", "Foster", "Curtis", "Earle", "Quentin", "Franklin", "Carlo", "Rudolf", "Mathew", "Roosevelt", "Antoine", "Claud", "Jacques", "Whitney", "Colby", "Gerardo", "Williams", "Sebastian", "Rueben", "Maynard", "Ben"]
+@initials = ("A".."Z").to_a
 @domains = ["gmail.com", "hotmail.com", "outlook.com", "hotmail.co.uk", "aol.com", "lewagon.com"]
 
 @descriptions = ["Great bargain! No strings attached!", "The world's favourite debt-collectors!", "Cosa nostra ;)", "An interested party", "Free lunch!", "Money never sleeps..."]
@@ -18,6 +19,7 @@ def seed_loan_offers(n)
 old_count = Offer.count
   p "#{old_count} existing offers"
   p "Seeding new offers"
+  user_photo = @photos[rand(0..11)]
   n.times do
     new_offer = Offer.new(amount: (100 * rand(1..500)),
       currency: "EUR",
@@ -26,7 +28,7 @@ old_count = Offer.count
       bank_account: rand(100000000000..999999999999),
       address: "#{@street_type[rand(0..3)]} de #{@street_name[rand(0..(@street_name.length))]}",
       user_id: User.last.id,
-      remote_photo_url: "#{@photos[rand(0..11)]}")
+      remote_photo_url: "#{user_photo}")
     if new_offer.valid?
       new_offer.save
       p Offer.last
@@ -50,7 +52,7 @@ def seed_users(n)
   n.times do
     new_user = User.new(email: "#{@names[rand(0...50)]}.#{@names[rand(0...50)]}_#{rand(50)}@#{@domains[rand(5)]}",
     password: "123456",
-    first_name: @names[rand(0...50)],
+    first_name: "#{@names[rand(0...50)]} #{@initials[rand(0..@initials.length)]}.",
     last_name: @names[rand(0...50)])
     if new_user.valid?
       new_user.save
