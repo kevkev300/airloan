@@ -11,7 +11,7 @@ class LoansController < ApplicationController
     @loan.total_price = total_price(@loan)
 
     if @loan.save
-      redirect_to user_path(current_user)
+      redirect_to offers_path
     else
       render "offers/show"
     end

@@ -333,7 +333,7 @@ def seed_users(n)
       new_user.save
       p User.last
       p "New User No. #{User.count}"
-      seed_loan_offers(rand(0..3), selected_user)
+      seed_loan_offers(1, selected_user)
     else
       p new_user.errors.messages
     end
@@ -342,4 +342,4 @@ def seed_users(n)
   p total_count = "#{User.count} Total Users"
 end
 
-seed_users(10)
+seed_users(30)
