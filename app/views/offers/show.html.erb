@@ -13,7 +13,15 @@
             </div>
             <div class="conditions-list">
               <ul class="list-group list-group-horizontal">
-                <li class="list-group-item"></i> <i class="fas fa-euro-sign"> </i> <%= @offer.amount ? @offer.amount : "none" %> </li>
+                <li class="list-group-item"></i> <i class="fas fa-euro-sign"> </i>
+                  <% if @offer.amount >= 1_000 %>
+                    <%= "#{@offer.amount.to_s[0..-4]}.#{@offer.amount.to_s[-3..-1]},00" %>
+                  <% elsif @offer.amount >= 1_000_000 %>
+                    <%= "#{@offer.amount.to_s[0..-7]}.#{@offer.amount.to_s[-6..-4]}.#{@offer.amount.to_s[-3..-1]},00" %>
+                  <% else %>
+                    <%= "#{@offer.amount.to_s},00" %>
+                  <% end %>
+                </li>
                 <li class="list-group-item"><%= @offer.interest ? @offer.interest : "none"  %> <i class="fas fa-percentage"></i></li>
               </ul>
             </div>

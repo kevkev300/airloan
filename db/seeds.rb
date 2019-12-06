@@ -169,7 +169,7 @@
   {
     first_name: "Hamza",
     last_name: "M'Barek",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631854/user_profile_images/T02NE0241-U0CAK1T88-81f976504e1c-512_b8tobm.jpg",
+    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631890/user_profile_images/T02NE0241-UPNR72TP0-ae9ed4ff472c-512_lfwhae.jpg",
     address: "Paris, France"
   },
   {
@@ -294,7 +294,7 @@ def seed_loan_offers(n, selected_user)
   p "Seeding new offers"
   # user_photo = @photos[rand(0..11)]
   n.times do
-    new_offer = Offer.new(amount: (100 * rand(1..10)),
+    new_offer = Offer.new(amount: (100 * rand(1..100)),
       currency: "EUR",
       interest: rand(1..20),
       description: "Hi I'm #{selected_user[:first_name]}! #{@descriptions[rand(@descriptions.length)]} By far the best deal in #{selected_user[:address]}",
