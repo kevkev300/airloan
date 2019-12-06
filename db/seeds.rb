@@ -10,7 +10,7 @@
 # @initials = ("A".."Z").to_a
 @domains = ["gmail.com", "hotmail.com", "outlook.com", "hotmail.co.uk", "aol.com", "lewagon.com"]
 
-@descriptions = ["Offering a great bargain! And no strings attached!", "A no brainer deal! Can sort all your money problems just like that :D", "Providing the lowest interest in the area!"]
+@descriptions = ["Offering a great bargain! And no strings attached!", "A no brainer deal! Can sort all your money problems just like that :D", "Providing the lowest interest in the area! Come check out these sweet loans!"]
 # @street_type = ["Carrer", "Pasatge", "Passeig", "Avinguda"]
 # @street_name = ["Aldana", "Alí Bei", "Almogàvers", "Anaïs Napoléon", "Aragó", "Aribau", "Arts", "Ausiàs Marc", "Bailèn", "Balmes", "Batlló", "Beatriu de Provença", "Bergara", "Bocabella", "Bofill", "Bosquet dels Encants", "Bruc", "Buenos Aires", "Plaça de Catalunya", "Calàbria", "Camps Elisis", "Canonge Cluffí", "Caputxins", "Carlit", "Cartagena", "Casanova", "Casp", "Catalunya", "Centelles", "Cèsar Mantinell", "Clotilde Cerdà", "Coll del Portell", "Comte Borrell", "Comte d'Urgell", "Concepció", "Consell de Cent", "Constança d'Aragó", "Còrsega", "Avinguda Diagonal", "Diagonal", "Diputació", "Doctor Ferrer i Cajigal", "Doctor Letamendi", "Doctor Robert", "Domingo", "Emerssenda de Carcassona", "Emma de Barcelona", "Enamorats", "Enric Granados", "Enriqueta Sèculi", "Entença", "Escoles", "Estació del Nord", "Flora Tristan", "Floridablanca", "Font", "Fontanella", "Gaiolà", "Gaudí", "Gaudí", "Girona", "Goya", "Gràcia", "Gran Via de les Corts Catalanes", "Henry Dunant", "Hispanitat", "Igualtat", "Indústria", "Indústria", "Jaume Perich", "Joan Brossa", "Joan Carles I", "Joan Casas", "Joan Miró", "Josep Tarradellas", "Laietana", "Albéniz", "Lepant", "Lina Òdena", "Llançà"]
 # @photos = ["https://res.cloudinary.com/kl3000/image/upload/v1575466342/44-Big-Short-Paramount_esvfo5.jpg", "https://res.cloudinary.com/kl3000/image/upload/v1575466273/bigshort0016_cveu2n.jpg", "https://res.cloudinary.com/kl3000/image/upload/v1575466161/f54fa898ecd8901cb8a95403025b9a32_mnioxz.jpg", "https://res.cloudinary.com/kl3000/image/upload/v1575466045/fotonoticia_20090916105917_640_iu8n7d.jpg", "https://res.cloudinary.com/kl3000/image/upload/v1575466001/5a4669d6b0bcd584188b74cc_nltnwz.jpg", "https://res.cloudinary.com/kl3000/image/upload/v1575465956/1_UMLuABJUsRK5BL3pT8sQRA_iltadq.png", "https://res.cloudinary.com/kl3000/image/upload/v1575462040/CR_13916-640x425_p9htm1.png", "https://res.cloudinary.com/kl3000/image/upload/v1575461983/62427-paramount_c5n3qb.jpg", "https://res.cloudinary.com/kl3000/image/upload/v1575461956/maxresdefault_a0lx2o.jpg", "https://res.cloudinary.com/kl3000/image/upload/v1575461944/14873d1471582534-joker-s-pile-money-test2_ujycgw.jpg", "https://res.cloudinary.com/kl3000/image/upload/v1575461927/1366_2000_lehfn8.jpg", "https://res.cloudinary.com/kl3000/image/upload/v1575461912/918e7a39b2d71bd85d3e26cf6b42a1ec_uwglur.jpg"]
@@ -37,7 +37,7 @@
   {
     first_name: "Zaynab",
     last_name: "Ashraf",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575630864/user_profile_images/photo-1501196354995-cbb51c65aaea_krbcn3.jpg",
+    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575630874/user_profile_images/photo-1520813792240-56fc4a3765a7_dgl3eu.jpg",
     address: "Tunis, Tunisia"
   },
   {
@@ -58,24 +58,24 @@
     photo: "https://res.cloudinary.com/kl3000/image/upload/v1575630902/user_profile_images/photo-1500048993953-d23a436266cf_r5ekoq.jpg",
     address: "Canary Wharf, London"
   },
-  {
-    first_name: "Alexander",
-    last_name: "Hollmann",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575630948/user_profile_images/T02NE0241-UPM08BB4G-e03b376ab89c-512_ud9mzo.jpg",
-    address: "Frankfurt, Germany"
-  },
-  {
-    first_name: "Alex Stefan",
-    last_name: "Sima",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575630972/user_profile_images/T02NE0241-UP7UZUUTC-285ae1d2dce5-512_o0pvwi.jpg",
-    address: "Clot, Barcelona"
-  },
-  {
-    first_name: "Andrés",
-    last_name: "Ramos",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575630984/user_profile_images/T02NE0241-UPLK9PZ2R-381c9c64d4d1-512_vx01ze.jpg",
-    address: "Verdaguer, Barcelona"
-  },
+  # {
+  #   first_name: "Alexander",
+  #   last_name: "Hollmann",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575630948/user_profile_images/T02NE0241-UPM08BB4G-e03b376ab89c-512_ud9mzo.jpg",
+  #   address: "Frankfurt, Germany"
+  # },
+  # {
+  #   first_name: "Alex Stefan",
+  #   last_name: "Sima",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575630972/user_profile_images/T02NE0241-UP7UZUUTC-285ae1d2dce5-512_o0pvwi.jpg",
+  #   address: "Clot, Barcelona"
+  # },
+  # {
+  #   first_name: "Andrés",
+  #   last_name: "Ramos",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575630984/user_profile_images/T02NE0241-UPLK9PZ2R-381c9c64d4d1-512_vx01ze.jpg",
+  #   address: "Verdaguer, Barcelona"
+  # },
   {
     first_name: "Angelica",
     last_name: "De Moffarts",
@@ -88,12 +88,12 @@
     photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631328/user_profile_images/T02NE0241-U8314BQ82-01c1dcf7eca3-512_jmkpyi.jpg",
     address: "Koninklijk Paleis, Amsterdam"
   },
-  {
-    first_name: "Ben",
-    last_name: "Toosey",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631375/user_profile_images/T02NE0241-UPL535Y6Q-cc4875c7306c-512_ht297e.jpg",
-    address: "Buckinghamshire, UK"
-  },
+  # {
+  #   first_name: "Ben",
+  #   last_name: "Toosey",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631375/user_profile_images/T02NE0241-UPL535Y6Q-cc4875c7306c-512_ht297e.jpg",
+  #   address: "Buckinghamshire, UK"
+  # },
   {
     first_name: "Camille",
     last_name: "Bonnet",
@@ -106,12 +106,12 @@
     photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631397/user_profile_images/T02NE0241-U7NAVD676-9fbc275d84b3-512_vuaiva.jpg",
     address: "Lille, France"
   },
-  {
-    first_name: "Christos",
-    last_name: "Kaltaveridis",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631481/user_profile_images/T02NE0241-UPL897MJ8-e50ac5a48da9-512_iop3oz.png",
-    address: "Cardiff, UK"
-  },
+  # {
+  #   first_name: "Christos",
+  #   last_name: "Kaltaveridis",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631481/user_profile_images/T02NE0241-UPL897MJ8-e50ac5a48da9-512_iop3oz.png",
+  #   address: "Cardiff, UK"
+  # },
   {
     first_name: "Claire",
     last_name: "Dinsart",
@@ -130,12 +130,12 @@
     photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631539/user_profile_images/T02NE0241-UPE6G9J49-d22621b165bd-512_fhpewx.jpg",
     address: "Kansas, US"
   },
-  {
-    first_name: "Elena",
-    last_name: "Perez",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631636/user_profile_images/T02NE0241-UPNSBGT0W-c173a85e1293-512_jmfmsw.jpg",
-    address: "Placa Reial, Barcelona"
-  },
+  # {
+  #   first_name: "Elena",
+  #   last_name: "Perez",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631636/user_profile_images/T02NE0241-UPNSBGT0W-c173a85e1293-512_jmfmsw.jpg",
+  #   address: "Placa Reial, Barcelona"
+  # },
   {
     first_name: "Elise",
     last_name: "Navarro",
@@ -148,12 +148,12 @@
     photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631683/user_profile_images/T02NE0241-U4598RZGF-b92abaa9d3bf-512_osyidq.jpg",
     address: "Carrer d'En Grassot, Barcelona"
   },
-  {
-    first_name: "Gabriel",
-    last_name: "Constantin Ursache",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631767/user_profile_images/T02NE0241-UPL6PFTA8-77844c4dfb36-512_vcs2sh.png",
-    address: "Bucharest, Romania"
-  },
+  # {
+  #   first_name: "Gabriel",
+  #   last_name: "Constantin Ursache",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631767/user_profile_images/T02NE0241-UPL6PFTA8-77844c4dfb36-512_vcs2sh.png",
+  #   address: "Bucharest, Romania"
+  # },
   {
     first_name: "Gijs",
     last_name: "Maks",
@@ -178,42 +178,42 @@
     photo: "https://res.cloudinary.com/kl3000/image/upload/v1575631965/user_profile_images/T02NE0241-UP7R4UMTL-a8948787a53c-512_pa33xz.png",
     address: "Bilbao, Spain"
   },
-  {
-    first_name: "Isac",
-    last_name: "Giuk Kim",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632170/user_profile_images/T02NE0241-UPLK2131N-e1b9f6081978-512_bcsftl.png",
-    address: "Quito, Ecuador"
-  },
-  {
-    first_name: "Ivana",
-    last_name: "Piljic",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632262/user_profile_images/T02NE0241-UPE8T7BMF-d221df9b7ce2-512_j6wwur.jpg",
-    address: "Zadar, Croatia"
-  },
-  {
-    first_name: "Malou",
-    last_name: "Allertz",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632348/user_profile_images/T02NE0241-U281EAB8D-6bd41d7b2018-512_lugths.png",
-    address: "Leiden, Netherlands"
-  },
+  # {
+  #   first_name: "Isac",
+  #   last_name: "Giuk Kim",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632170/user_profile_images/T02NE0241-UPLK2131N-e1b9f6081978-512_bcsftl.png",
+  #   address: "Quito, Ecuador"
+  # },
+  # {
+  #   first_name: "Ivana",
+  #   last_name: "Piljic",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632262/user_profile_images/T02NE0241-UPE8T7BMF-d221df9b7ce2-512_j6wwur.jpg",
+  #   address: "Zadar, Croatia"
+  # },
+  # {
+  #   first_name: "Malou",
+  #   last_name: "Allertz",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632348/user_profile_images/T02NE0241-U281EAB8D-6bd41d7b2018-512_lugths.png",
+  #   address: "Leiden, Netherlands"
+  # },
   {
     first_name: "Miguel Ángel",
     last_name: "Marfil Rubio",
     photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632434/user_profile_images/T02NE0241-UPE7M99U1-32151dfec812-512_xfqpoh.jpg",
     address: "Placa Catalunya, Barcelona"
   },
-  {
-    first_name: "Mireia",
-    last_name: "Palmero",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632531/user_profile_images/T02NE0241-UPNEUMKCP-2be77693c771-512_c0wedv.jpg",
-    address: "Barceloneta, Barcelona"
-  },
-  {
-    first_name: "Nicholas",
-    last_name: "Jardine",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632608/user_profile_images/T02NE0241-UP7T3D858-a61e60b3df53-512_qiihnf.jpg",
-    address: "Johannesburg, South Africa"
-  },
+  # {
+  #   first_name: "Mireia",
+  #   last_name: "Palmero",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632531/user_profile_images/T02NE0241-UPNEUMKCP-2be77693c771-512_c0wedv.jpg",
+  #   address: "Barceloneta, Barcelona"
+  # },
+  # {
+  #   first_name: "Nicholas",
+  #   last_name: "Jardine",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632608/user_profile_images/T02NE0241-UP7T3D858-a61e60b3df53-512_qiihnf.jpg",
+  #   address: "Johannesburg, South Africa"
+  # },
   {
     first_name: "Nico",
     last_name: "Standup",
@@ -232,60 +232,61 @@
     photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632840/user_profile_images/T02NE0241-UPL530BJ8-71dcd1eab182-512_snomcx.png",
     address: "Park Güell, Barcelona"
   },
-  {
-    first_name: "Roy",
-    last_name: "Souvereyns",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632956/user_profile_images/T02NE0241-UPNNQ4SQ7-7a67b587c825-512_i1goyi.png",
-    address: "Brussels, Belgium"
-  },
+  # {
+  #   first_name: "Roy",
+  #   last_name: "Souvereyns",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575632956/user_profile_images/T02NE0241-UPNNQ4SQ7-7a67b587c825-512_i1goyi.png",
+  #   address: "Brussels, Belgium"
+  # },
   {
     first_name: "Sandra",
     last_name: "Carmona Serrat",
     photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633072/user_profile_images/T02NE0241-UPNR00MJS-3f78e18209ea-512_pzuxot.jpg",
     address: "Tibidabo, Barcelona"
   },
+  # {
+  #   first_name: "Sarah",
+  #   last_name: "Ma",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633188/user_profile_images/T02NE0241-UPNR02CCE-79f183a257a3-512_buopuu.jpg",
+  #   address: "Los Angeles, US"
+  # },
+  # {
+  #   first_name: "Smruthi",
+  #   last_name: "Lattupalli",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633315/user_profile_images/T02NE0241-UPE3UGVHP-ca0511be2cc0-512_njvjve.jpg",
+  #   address: "Joanic, Barcelona"
+  # },
+  # {
+  #   first_name: "Thomas",
+  #   last_name: "Julien",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633440/user_profile_images/T02NE0241-UP9P145FU-5c9d7959b92f-512_dkkh5s.jpg",
+  #   address: "Avignon, France"
+  # },
+  # {
+  #   first_name: "Veronika",
+  #   last_name: "Wajda",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633583/user_profile_images/T02NE0241-UPNSFK57Y-fded15e76e1f-512_wcspvd.jpg",
+  #   address: "Calgary, Canada"
+  # },
+  # {
+  #   first_name: "Humbeline",
+  #   last_name: "De Marcillac",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633722/user_profile_images/T02NE0241-UP7SKR550-27db0832a318-512_xy6law.jpg",
+  #   address: "Marcillac, France"
+  # },
+  # {
+  #   first_name: "Glen",
+  #   last_name: "Warren",
+  #   photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633856/user_profile_images/T02NE0241-UL37H2W9L-a2b642e6c3d4-512_htrphc.jpg",
+  #   address: "Shoreditch, London"
+  # },
   {
-    first_name: "Sarah",
-    last_name: "Ma",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633188/user_profile_images/T02NE0241-UPNR02CCE-79f183a257a3-512_buopuu.jpg",
-    address: "Los Angeles, US"
-  },
-  {
-    first_name: "Smruthi",
-    last_name: "Lattupalli",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633315/user_profile_images/T02NE0241-UPE3UGVHP-ca0511be2cc0-512_njvjve.jpg",
-    address: "Joanic, Barcelona"
-  },
-  {
-    first_name: "Thomas",
-    last_name: "Julien",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633440/user_profile_images/T02NE0241-UP9P145FU-5c9d7959b92f-512_dkkh5s.jpg",
-    address: "Avignon, France"
-  },
-  {
-    first_name: "Veronika",
-    last_name: "Wajda",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633583/user_profile_images/T02NE0241-UPNSFK57Y-fded15e76e1f-512_wcspvd.jpg",
-    address: "Calgary, Canada"
-  },
-  {
-    first_name: "Humbeline",
-    last_name: "De Marcillac",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633722/user_profile_images/T02NE0241-UP7SKR550-27db0832a318-512_xy6law.jpg",
-    address: "Marcillac, France"
-  },
-  {
-    first_name: "Glen",
-    last_name: "Warren",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575633856/user_profile_images/T02NE0241-UL37H2W9L-a2b642e6c3d4-512_htrphc.jpg",
-    address: "Shoreditch, London"
-  },
-  {
-    first_name: "Daniel",
-    last_name: "Landes",
-    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575635966/user_profile_images/T02NE0241-UP7SKTM0S-5cd01d3cbc2a-512_pz6zsa.jpg",
-    address: "Westminster, London"
-  }]
+    first_name: "Martin",
+    last_name: "Potié",
+    photo: "https://res.cloudinary.com/kl3000/image/upload/v1575647107/user_profile_images/T02NE0241-UPE65SNGH-9d2aa9469cef-512_yqbzdz.png",
+    address: "Antwerp, Belgium"
+  }
+]
 
 
 def seed_loan_offers(n, selected_user)
@@ -333,7 +334,7 @@ def seed_users(n)
       new_user.save
       p User.last
       p "New User No. #{User.count}"
-      seed_loan_offers(rand(0..3), selected_user)
+      seed_loan_offers(1, selected_user)
     else
       p new_user.errors.messages
     end
@@ -342,4 +343,4 @@ def seed_users(n)
   p total_count = "#{User.count} Total Users"
 end
 
-seed_users(10)
+seed_users(40)
