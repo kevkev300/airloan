@@ -27,7 +27,15 @@
           <%= cl_image_tag offer.photo, height: 150, width: 200, crop: :fill %>
           <div class="card-trip-infos">
             <div>
-              <h2><%= "€ #{offer.amount.to_s[0..-4]},#{offer.amount.to_s[-3..-1]}" %></h2>
+              <h2>
+                <% if offer.amount >= 1_000 %>
+                  <%= "€ #{offer.amount.to_s[0..-4]},#{offer.amount.to_s[-3..-1]}" %>
+                <% elsif offer.amount >= 1_000_000 %>
+                  <%= "€ #{offer.amount.to_s[0..-7]},#{offer.amount.to_s[-6..-4]},#{offer.amount.to_s[-3..-1]}" %>
+                <% else %>
+                  <%= "€ #{offer.amount.to_s}" %>
+                <% end %>
+              </h2>
               <p><%= "#{offer.user.first_name} #{offer.user.last_name}" %></p>
             </div>
             <h2 class="card-trip-pricing"><%= "#{offer.interest} %" %></h2>
