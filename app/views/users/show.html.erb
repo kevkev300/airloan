@@ -1,15 +1,16 @@
 <!-- !!!!! This page is not finished and until now just used to se backend output !!!!! -->
 <body style="background-color: rgba(254, 243, 6,0.8);">
   <div class="container-user-show">
+    <h1 style="padding-left: 3px; font-size: 32px; background-color: rgb(125, 41, 231); font-weight: lighter; color: white; text-shadow: none; width: 12.2%; margin-bottom: 0px;">Hey <strong style="font-weight: bold;"><%= current_user.first_name %></strong>,</h1>
+    <h1 style="padding-left: 3px; font-size: 32px; background-color: rgb(125, 41, 231); font-weight: lighter; color: white; text-shadow: none; width: 27.7%;">here's your loan summary!</h1>
 
-    <h1> Hey <%= current_user.first_name %>, here's your loan summary! </h1>
-    <p>Registered in <%= current_user.created_at.year %> </p>
     <div class="body-user-show">
 
       <!-- Section for borrowers, when they requested at least one loan -->
       <% if current_user.loans.count > 0 %>
         <div class="as-borrower">
-          <h2>Your requests</h2>
+
+          <h2 style="font-size: 25px; color: rgb(125, 41, 231); padding-left: 3px; background-blend-mode: color;">Your requests</h1>
           <div class="requests-borrower">
             <!-- display requests -->
             <% current_user.loans.each do |loan| %>
@@ -37,7 +38,9 @@
       <% if current_user.offers.count > 0 %>
         <div class="as-lender">
           <div class="requests-lender">
-
+            <% if @has_loan_request %>
+              <h2 style="font-size: 25px; color: rgb(125, 41, 231); padding-left: 3px; background-blend-mode: color;">My received loan requests</h1>
+            <% end %>
             <!-- display pending offers -->
             <% current_user.offers.each do |offer| %>
               <% offer.loans.each do |loan| %>
@@ -92,7 +95,7 @@
           </div>
 
           <!-- display all posted offers -->
-          <h2 style="padding-bottom: 20px">My posted loans</h3>
+          <h2 style="font-size: 25px; color: rgb(125, 41, 231); padding-left: 3px; background-blend-mode: color;">My posted loans</h1>
             <div class="offers">
               <% current_user.offers.each do |offer| %>
                 <%= link_to offer_path(offer.id) do %>
