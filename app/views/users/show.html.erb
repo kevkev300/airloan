@@ -38,9 +38,8 @@
       <% if current_user.offers.count > 0 %>
         <div class="as-lender">
           <div class="requests-lender">
-            <% if @has_loan_request %>
-              <h2 style="font-size: 25px; color: rgb(125, 41, 231); padding-left: 3px; background-blend-mode: color;">My received loan requests</h1>
-            <% end %>
+            <h2 style="font-size: 25px; color: rgb(125, 41, 231); padding-left: 3px; background-blend-mode: color;">My received loan requests</h1>
+
             <!-- display pending offers -->
             <% current_user.offers.each do |offer| %>
               <% offer.loans.each do |loan| %>
