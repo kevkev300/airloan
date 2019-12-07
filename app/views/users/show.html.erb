@@ -47,10 +47,10 @@
                 <div class="request-info", style="flex: 1">
                   <h2><%= loan.user.first_name %> asks you for a loan</h2>
                    <div>
-                    Requester: € <%= loan.user.first_name %> <%= loan.user.last_name %> </br>
+                    Requester: <%= loan.user.first_name %> <%= loan.user.last_name %> </br>
                     Loan amount: € <%= offer.amount %></br>
                     From: <%= loan.start_date %> until: <%= loan.end_date %>                     </br>
-                    Total price: <%= loan.total_price %>
+                    Total price: € <%= loan.total_price %>
                   </div>
                 </div>
                 <div class="request-buttons">
