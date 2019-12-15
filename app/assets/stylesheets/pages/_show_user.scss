@@ -5,9 +5,7 @@
 }
 
 .body-user-show {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 30px;
+  display: flex;
 }
 
 .user-data {
@@ -25,7 +23,7 @@
 
 .offers {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 70px;
 }
 
@@ -35,4 +33,21 @@
    &:hover{
     color: rgba(0, 0, 0, 0.7)
    }
+}
+
+.as-lender {
+  width: 100%
+}
+
+.as-borrower {
+  border-right-width: 2px;
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-right-style: solid;
+  padding-right: 20px;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.status {
+  color: #8361E7;
 }

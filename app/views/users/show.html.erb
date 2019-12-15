@@ -1,95 +1,127 @@
 <!-- !!!!! This page is not finished and until now just used to se backend output !!!!! -->
 <body style="background-color: rgba(254, 243, 6,0.8);">
   <div class="container-user-show">
+    <h1 style="padding-left: 3px; font-size: 32px; background-color: rgb(125, 41, 231); font-weight: lighter; color: white; text-shadow: none; width: 12.2%; margin-bottom: 0px;">Hey <strong style="font-weight: bold;"><%= current_user.first_name %></strong>,</h1>
+    <h1 style="padding-left: 3px; font-size: 32px; background-color: rgb(125, 41, 231); font-weight: lighter; color: white; text-shadow: none; width: 27.7%;">here's your loan summary!</h1>
 
-    <h1> Hey <%= current_user.first_name %>, here's your loan summary! </h1>
-    <p>Registered in <%= current_user.created_at.year %> </p>
     <div class="body-user-show">
 
-      <div class="as-lender">
+      <!-- Section for borrowers, when they requested at least one loan -->
+      <% if current_user.loans.count > 0 %>
+        <div class="as-borrower">
 
-        <div class="requests-lender">
-          <!-- display pending offers -->
-          <% current_user.offers.each do |offer| %>
-            <% offer.loans.each do |loan| %>
-              <% if loan.status == "pending" %>
-
-                  <div class="request-card">
-                    <%= cl_image_tag loan.offer.photo %>
-                    <div class="request-info" style="flex: 1">
-                      <h2><%= loan.user.first_name %> asks you for a loan</h2>
-                      <div>
-                        Requester: <%= loan.user.first_name %> <%= loan.user.last_name %> </br>
-                        Loan amount: € <%= offer.amount %></br>
-                        From: <%= loan.start_date %> until: <%= loan.end_date %>                     </br>
-                        Total price: € <%= loan.total_price %>
-                      </div>
-                    </div>
-                    <div class="request-buttons">
-                      <div>
-                        <%= link_to "Accept", accepted_by_lender_loan_path(loan), class: "btn btn-flat request-button", style: "width: 200px" %>
-                      </div>
-                      <div>
-                        <%= link_to "Decline", declined_by_lender_loan_path(loan), class: "btn btn-flat-ghost request-button", style: "width: 200px" %>
-                      </div>
-                    </div>
-                  </div>
-              <% end %>
-            <% end %>
-          <% end %>
-
-          <!-- display accepted offers -->
-          <% current_user.offers.each do |offer| %>
-            <% offer.loans.each do |loan| %>
-              <% if loan.status == "accepted" %>
-                <div class="request-card">
-                  <%= cl_image_tag loan.offer.photo %>
-                <div class="request-info", style="flex: 1">
-                  <h2><%= loan.user.first_name %> asks you for a loan</h2>
-                   <div>
-                    Requester: <%= loan.user.first_name %> <%= loan.user.last_name %> </br>
-                    Loan amount: € <%= offer.amount %></br>
-                    From: <%= loan.start_date %> until: <%= loan.end_date %>                     </br>
+          <h2 style="font-size: 25px; color: rgb(125, 41, 231); padding-left: 3px; background-blend-mode: color;">Your requests</h1>
+          <div class="requests-borrower">
+            <!-- display requests -->
+            <% current_user.loans.each do |loan| %>
+              <div class="request-card">
+                <%= cl_image_tag loan.offer.photo %>
+                <div class="request-info" style="flex: 1">
+                  <h2>You asked <%= loan.offer.user.first_name %> a loan</h2>
+                  <div>
+                    Lender: <%= loan.offer.user.first_name %> <%= loan.offer.user.last_name %></br>
+                    Loan amount: € <%= loan.offer.amount %></br>
+                    From: <%= loan.start_date %> until: <%= loan.end_date %></br>
                     Total price: € <%= loan.total_price %>
                   </div>
                 </div>
                 <div class="request-buttons">
-                  <h3 class="accepted">ACCEPTED</h3>
+                  <h4 class="status"><%= loan.status.upcase! %></h4>
                 </div>
               </div>
             <% end %>
-          <% end %>
-        <% end %>
+          </div>
         </div>
+      <% end %>
 
-        <% if current_user.offers.count > 0 %>
-        <h2 style="padding-bottom: 20px">My posted loans</h3>
-          <div class="offers">
+      <!-- Section for lenders, when they have at least one offer -->
+      <% if current_user.offers.count > 0 %>
+        <div class="as-lender">
+          <div class="requests-lender">
+            <h2 style="font-size: 25px; color: rgb(125, 41, 231); padding-left: 3px; background-blend-mode: color;">My received loan requests</h1>
+
+            <!-- display pending offers -->
             <% current_user.offers.each do |offer| %>
-              <%= link_to offer_path(offer.id) do %>
-                <div class="card-trip card-user-offer">
-                  <%= cl_image_tag offer.photo, height: 150, width: 200, crop: :fill %>
-                  <div class="card-trip-infos">
-                    <div>
-                      <h2>
-                        <% if offer.amount >= 1_000 %>
-                          <%= "€ #{offer.amount.to_s[0..-4]}.#{offer.amount.to_s[-3..-1]},00" %>
-                        <% elsif offer.amount >= 1_000_000 %>
-                          <%= "€ #{offer.amount.to_s[0..-7]}.#{offer.amount.to_s[-6..-4]}.#{offer.amount.to_s[-3..-1]},00" %>
-                        <% else %>
-                          <%= "€ #{offer.amount.to_s},00" %>
-                        <% end %>
-                      </h2>
-                      <p><%= "#{offer.user.first_name} #{offer.user.last_name}" %></p>
+              <% offer.loans.each do |loan| %>
+                <% if loan.status == "pending" %>
+
+                    <div class="request-card">
+                      <%= cl_image_tag loan.offer.photo %>
+                      <div class="request-info" style="flex: 1">
+                        <h2><%= loan.user.first_name %> asks you for a loan</h2>
+                        <div>
+                          Requester: <%= loan.user.first_name %> <%= loan.user.last_name %></br>
+                          Loan amount: € <%= offer.amount %></br>
+                          From: <%= loan.start_date %> until: <%= loan.end_date %></br>
+                          Total price: € <%= loan.total_price %>
+                        </div>
+                      </div>
+                      <div class="request-buttons">
+                        <div>
+                          <%= link_to "Accept", accepted_by_lender_loan_path(loan), class: "btn btn-flat request-button", style: "width: 120px" %>
+                        </div>
+                        <div>
+                          <%= link_to "Decline", declined_by_lender_loan_path(loan), class: "btn btn-flat-ghost request-button", style: "width: 120px" %>
+                        </div>
+                      </div>
                     </div>
-                    <h2 class="card-trip-pricing"><%= "#{offer.interest} %" %></h2>
+                <% end %>
+              <% end %>
+            <% end %>
+
+
+            <!-- display accepted offers -->
+            <% current_user.offers.each do |offer| %>
+              <% offer.loans.each do |loan| %>
+                <% if loan.status == "accepted" %>
+                  <div class="request-card">
+                    <%= cl_image_tag loan.offer.photo %>
+                  <div class="request-info", style="flex: 1">
+                    <h2><%= loan.user.first_name %> asks you for a loan</h2>
+                     <div>
+                      Requester: € <%= loan.user.first_name %> <%= loan.user.last_name %> </br>
+                      Loan amount: € <%= offer.amount %></br>
+                      From: <%= loan.start_date %> until: <%= loan.end_date %>                     </br>
+                      Total price: <%= loan.total_price %>
+                    </div>
+                  </div>
+                  <div class="request-buttons">
+                    <h4 class="status"><%= loan.status.upcase! %></h4>
                   </div>
                 </div>
               <% end %>
             <% end %>
-            <% end %>
+          <% end %>
+          </div>
+
+          <!-- display all posted offers -->
+          <h2 style="font-size: 25px; color: rgb(125, 41, 231); padding-left: 3px; background-blend-mode: color;">My posted loans</h1>
+            <div class="offers">
+              <% current_user.offers.each do |offer| %>
+                <%= link_to offer_path(offer.id) do %>
+                  <div class="card-trip card-user-offer">
+                    <%= cl_image_tag offer.photo, height: 150, width: 150, crop: :fill %>
+                    <div class="card-trip-infos">
+                      <div>
+                        <h2>
+                          <% if offer.amount >= 1_000 %>
+                            <%= "€ #{offer.amount.to_s[0..-4]}.#{offer.amount.to_s[-3..-1]},00" %>
+                          <% elsif offer.amount >= 1_000_000 %>
+                            <%= "€ #{offer.amount.to_s[0..-7]}.#{offer.amount.to_s[-6..-4]}.#{offer.amount.to_s[-3..-1]},00" %>
+                          <% else %>
+                            <%= "€ #{offer.amount.to_s},00" %>
+                          <% end %>
+                        </h2>
+                        <p><%= "#{offer.user.first_name} #{offer.user.last_name}" %></p>
+                      </div>
+                      <h2 class="card-trip-pricing"><%= "#{offer.interest} %" %></h2>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
 </body>
